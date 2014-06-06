@@ -1,0 +1,161 @@
+/*
+Theme Name: Victoria Codes
+Theme URI: http://victoriacodes.com
+Author: Victoria Vaitekunas
+Author URI: http://victoriacodes.com
+Description: A theme created for portfolio site.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+
+@import url('font-awesome.min.css');
+//**************************************************************||
+//                       VARIABLES                              ||
+//**************************************************************||
+$black: #2B2A2A;
+$transblack: rgba(43,42,42,0.9);
+$transblack2: rgba(43,42,42,0.4);
+$white: #F7F7F7;
+$transwhite: rgba(247,247,247,0.6);
+$lightgrey: #B2B5B8;
+$transgrey: rgba(178,181,184,0.9);
+//**************************************************************||
+//                        MIXINS                                ||
+//**************************************************************||
+
+//**************************************************************||
+//                        GLOBAL                                ||
+//**************************************************************||
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+*, *:before, *:after {
+  	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+.clearfix:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+h1 {
+	text-transform: lowercase;
+	font-family: Questrial, sans-serif;
+	padding: 50px;
+	font-size: 6em;
+}
+//**************************************************************||
+//                 SUPERCONTAINER                               ||
+//**************************************************************||
+.supercontainer {
+    width: 100%;
+    padding: 0 0 100px 0;
+}
+.container {
+    height:230px;
+    width: 16.66%;
+    position: relative;
+    float: left;
+}
+.size {
+    width: 50%;
+    height: 100px;
+    position: absolute;
+}
+.side1{
+    background: $lightgrey;
+    -webkit-transform:skewy(30deg);
+}
+.side2 {
+    background: $black;
+    -webkit-transform:skewy(330deg);
+    left: 50%;
+}
+.side3 {
+    background: $black;
+    -webkit-transform:skewy(330deg);
+    top:115px;
+}
+.side4 {
+    background: $lightgrey;
+    -webkit-transform:skewy(30deg);
+    top: 115px;
+    left: 50%;
+}
+
+//RESPONSIVE****************************************************||
+@media (max-width: 1200px) {
+    .container {
+        width: 25%;
+    }    
+    .container:nth-child(13),
+    .container:nth-child(14),
+    .container:nth-child(15),
+    .container:nth-child(16),
+    .container:nth-child(17),
+    .container:nth-child(18) {
+        display: none;
+    }
+}
+@media (max-width: 1000px) {
+    .container {
+        width: 33%;
+    }
+    .container:nth-child(10),
+    .container:nth-child(11),
+    .container:nth-child(12) {
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        width: 50%;
+    }
+    .container:nth-child(7),
+    .container:nth-child(8),
+    .container:nth-child(9) {
+        display: none;
+    }
+}
+@media (max-width: 320px) {
+    .container {
+        width: 100%
+    }
+    .container:nth-child(3),
+    .container:nth-child(4),
+    .container:nth-child(5),
+    .container:nth-child(6) {
+        display: none;
+    }
+}
+//**************************************************************||
+//                        PORTFOLIO                             ||
+//**************************************************************||
+.portfolio {
+    border: 5px solid blue;
+    clear: both;
+}
+.pfitem {
+    width: 50%;
+    border: 3px solid red;
+    float: left;
+    img {
+        max-width: 100%;
+    }
+}
+//**************************************************************||
+//                          ABOUT                               ||
+//**************************************************************||
+.about {
+    width: 100%;
+}
+.skills {
+    width: 50%;
+    float: left;
+}
+.learning {
+    width: 50%;
+    float: right;
+}
