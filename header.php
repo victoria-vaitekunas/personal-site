@@ -3,14 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
-	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
 	<link href='http://fonts.googleapis.com/css?family=Questrial|Inconsolata|Cardo' rel='stylesheet' type='text/css'>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="google-site-verification" content="mFNfRjUNMOKQW3kH9NfTkYEtEiunXCanCQw9ialOrPI" />
 	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script>!window.jQuery && document.write('<script src="<?php bloginfo('template_directory');?>/js/jQuery.js"><\/script>')</script>
-	<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/script.js"></script>
 	 <?php wp_head(); ?>
 </head>
 <body>
