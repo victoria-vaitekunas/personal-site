@@ -24,6 +24,16 @@
     //wp_enqueue_script()
   }
   add_action('wp_enqueue_scripts','load_scripts');
+
+  function syntax_hi() {
+    if(is_singular() || is_archive()) {
+      wp_register_style('prismcss', get_bloginfo('template_url') . '/css/prism.css', false, null, true);
+      wp_enqueue_style('prismcss');
+      wp_register_script('prismjs', get_bloginfo('template_url') . '/js/prism.js', array('jquery'), null, true);
+      wp_enqueue_script('prismjs');
+    }
+  }
+  add_action('wp_enqueue_scripts', 'syntax_hi');
  
 	function get_my_header() {
   		// if is home, which is the front page
