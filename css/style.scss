@@ -1,0 +1,968 @@
+/*
+Theme Name: Victoria Codes
+Theme URI: http://victoriacodes.com
+Author: Victoria Vaitekunas
+Author URI: http://victoriacodes.com
+Description: A theme created for portfolio site.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+
+@import url('font-awesome-4.1.0/css/font-awesome.min.css');
+//**************************************************************||
+//                       VARIABLES                              ||
+//**************************************************************||
+//color
+$black: #2B2A2A;
+$transblack: rgba(43,42,42,0.9);
+$transblack2: rgba(43,42,42,0.4);
+$white: #F7F7F7;
+$transwhite: rgba(247,247,247,0.8);
+$lightgrey: #B2B5B8;
+$transgrey: rgba(178,181,184,0.9);
+$teal: #00D1C3;
+$borderwhite: 3px solid $white;
+//**************************************************************||
+//                        MIXINS                                ||
+//**************************************************************||
+@mixin main-font {
+    font-family: Questrial, sans-serif;
+    color: $black;
+}
+@mixin blog-p {
+    font-family: Cardo, Garamond, serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+@mixin noSurprises {
+    padding: 0;
+    margin: 0;
+}
+@mixin defaultwhiteborder {
+    border: $borderwhite;
+    border-radius: 3px;
+}
+@mixin whiteblack {
+    color: $white;
+    background: $black;
+}
+@mixin thirtydeg {
+    -webkit-transform:skewy(30deg);
+    -moz-transform:skewy(30deg);
+    -ms-transform:skewy(30deg);
+    -o-transform:skewy(30deg);
+    transform:skewy(30deg);
+}
+@mixin threethirtydeg {
+    -webkit-transform:skewy(330deg);
+    -moz-transform:skewy(330deg);
+    -ms-transform:skewy(330deg);
+    -o-transform:skewy(330deg);
+    transform:skewy(330deg);
+}
+@mixin twentydeg {
+    -webkit-transform:skewx(20deg);
+    -moz-transform:skewx(20deg);
+    -ms-transform:skewx(20deg);
+    -o-transform:skewx(20deg);
+    transform:skewx(20deg);
+}
+@mixin xthreethirty {
+    -webkit-transform:skewx(330deg);
+    -moz-transform:skewx(330deg);
+    -ms-transform:skewx(330deg);
+    -o-transform:skewx(330deg);
+    transform:skewx(330deg);
+}
+@mixin rotatefortyfive {
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    transform:rotate(45deg);
+}
+@mixin rotatethreefifteen {
+    -webkit-transform:rotate(315deg);
+    -moz-transform:rotate(315deg);
+    -ms-transform:rotate(315deg);
+    -o-transform:rotate(315deg);
+    transform:rotate(315deg);
+}
+//**************************************************************||
+//                        GLOBAL                                ||
+//**************************************************************||
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+*, *:before, *:after {
+  	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+.clearfix:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+body {
+    @include main-font;
+    background: $white;
+}
+html {
+    //max-width: 1400px;
+}
+h1 {
+	text-transform: lowercase;
+	padding: 50px 10%;
+	font-size: 6rem;
+    text-shadow: 1px 1px 1px $transblack2;
+    a {
+        text-decoration: none;
+        color: $black;
+    }
+}
+h2 {
+    font-size: 3.5rem;
+    text-shadow: 1px 1px 2px $transblack2;
+    @include noSurprises;
+}
+h3 {
+    font-size: 2em;
+}
+h6 {
+    @include noSurprises;
+    font-size: 2rem;
+    color: $white;
+    text-shadow: 1px 1px 2px $transblack2;
+}
+p {
+    line-height: 1.5;
+    a {
+        color: $black;
+        text-decoration: none;
+        &:hover {
+            color: $white;
+        }
+    }
+}
+//**************************************************************||
+//                      NAV                                     ||
+//**************************************************************||
+.nav {
+    z-index: 100;
+}
+.hamburger {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    padding: 10px;
+    color: $white;
+    z-index: 500;
+    i {
+        display: block;
+    }
+}
+.shownav {
+    display: none;
+}
+.navigation {
+        display: block;
+        list-style: none;
+        @include noSurprises;
+        text-align: right;
+        position: fixed;
+        z-index: 1000;
+        top: 130px;
+        right: 65px;
+        li {
+            @include noSurprises;
+            display: block;
+            a {
+                text-decoration: none;
+                color: $white;
+                font-size: 2rem;
+                &:hover {
+                    @include whiteblack;
+                }
+            }
+        }   
+    }
+//**************************************************************||
+//                 NON FRONT PAGE HEADER                        ||
+//**************************************************************||
+.nav2 {
+    background: $teal;
+    padding: 114px 10%;
+    z-index: 100;
+    h1 {
+        @include noSurprises;
+        a {
+        color: $white;
+        }
+    }
+}
+.hamburger2 {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    padding: 10px;
+    color: $white;
+}
+.navigation2 {
+        display: block;
+        list-style: none;
+        @include noSurprises;
+        text-align: right;
+        position: fixed;
+        top: 130px;
+        right: 65px;
+        li {
+            @include noSurprises;
+            display: block;
+            a {
+                text-decoration: none;
+                color: $white;
+                font-size: 2rem;
+                &:hover {
+                    @include whiteblack;
+                }
+            }
+        }   
+    }
+//RESPONSIVE****************************************************||
+@media (max-width: 1000px) {
+    h1 {
+        text-align: center;
+    }
+}
+@media (max-width: 750px) {
+    h1 {
+        font-size: 5rem;
+    }
+}
+@media (max-width: 800px) {
+    .hamburger,
+    .hamburger2 {
+        top: 0px;
+        right: 0px;
+        padding: 20px 20px 20px 100%;
+        background: $transblack;
+        z-index: 100;
+    }
+    .navigation,
+    .navigation2 {
+        top: 104px;
+        right: 0px;
+        background: $transblack;
+        padding: 0 18px 0 0; 
+        z-index: 100;
+        ul {
+            margin: 0;
+        }
+    }
+}
+@media (max-width: 400px) {
+    .hamburger,
+    .hamburger2 {
+        padding: 10px 10px 10px 100%;
+    }
+}
+//**************************************************************||
+//                 SUPERCONTAINER                               ||
+//**************************************************************||
+.supercontainer {
+    width: 100%;
+    padding: 0;
+}
+.container {
+    height:230px;
+    width: 16.66%;
+    position: relative;
+    float: left;
+}
+.size {
+    width: 50%;
+    height: 100px;
+    position: absolute;
+}
+.side1{
+    background: $lightgrey;
+    @include thirtydeg;
+}
+.side2 {
+    background: $black;
+    @include threethirtydeg;
+    left: 50%;
+}
+.side3 {
+    background: $black;
+    @include threethirtydeg;
+    top:115px;
+}
+.side4 {
+    background: $lightgrey;
+    @include thirtydeg;
+    top: 115px;
+    left: 50%;
+}
+
+//RESPONSIVE****************************************************||
+@media (max-width: 1200px) {
+    .container {
+        width: 25%;
+    }    
+    .container:nth-child(13),
+    .container:nth-child(14),
+    .container:nth-child(15),
+    .container:nth-child(16),
+    .container:nth-child(17),
+    .container:nth-child(18) {
+        display: none;
+    }
+}
+@media (max-width: 1000px) {
+    .container {
+        width: 33%;
+    }
+    .container:nth-child(10),
+    .container:nth-child(11),
+    .container:nth-child(12) {
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        width: 50%;
+    }
+    .container:nth-child(7),
+    .container:nth-child(8),
+    .container:nth-child(9) {
+        display: none;
+    }
+}
+@media (max-width: 320px) {
+    .container {
+        width: 100%
+    }
+    .container:nth-child(3),
+    .container:nth-child(4),
+    .container:nth-child(5),
+    .container:nth-child(6) {
+        display: none;
+    }
+}
+//**************************************************************||
+//                          ABOUT                               ||
+//**************************************************************||
+.about {
+    width: 100%;
+    background: $teal;
+    padding: 200px 15% 100px 10%;
+    color: $white;
+    margin-top: -70px;
+    .abouttext {
+        width: 50%;
+        // margin: 0 40% 0 10%;
+        float: left;
+        padding: 0 0 50px 0;
+        p {
+        font-size: 2rem;
+        }
+    }
+}
+.headshot {
+    @include rotatefortyfive;
+    border: 5px solid $white;
+    height: 369px;
+    width: 369px;
+    overflow: hidden;
+    float: right;
+    margin: 120px 30px 0 0;
+    border-radius: 3px;
+    img {
+        @include rotatethreefifteen;
+        margin: -215px 0 0 -78px;
+        max-width: 145%;
+        height: auto;
+    }
+}
+.aboutlist {
+    width: 100%;
+    // padding: 0 0 0 10%;
+    font-size: 2rem;
+    clear: both;
+    .skills {
+        width: 40%;
+        float: left;
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 20px 0;
+        }
+    }
+    .learning {
+        width: 60%;
+        float: right;
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 20px 0;
+        }
+    }
+}
+.paralellogram {
+    background: $black;
+    padding: 10px 40px;
+    display: inline-block;
+    @include twentydeg;
+    h2,
+    h6 {
+        @include xthreethirty;
+        color: $white;
+    }
+    p {
+        @include xthreethirty;
+       a {
+            color: $white;
+            font-size: 1.7rem;
+            text-decoration: none;
+        }
+    }    
+}
+//RESPONSIVE****************************************************||
+@media (max-width: 1300px) {  
+    .about .abouttext {
+        padding: 0 0 60px 0;
+            p {
+            font-size: 1.6rem;
+        }
+    } 
+}
+@media (max-width: 1200px) {
+    .about .abouttext {
+        width: 100%;
+        display: block;
+    }
+    .aboutlist { 
+        .skills,
+        .learning {
+            width: 100%;
+            display: block;
+            float: none;
+            padding: 0 0 85px 0;
+        }
+    }  
+    .paralellogram {
+        h2 {
+            font-size: 3rem;
+        }
+    }  
+}
+@media (max-width: 1000px) {
+    .headshot {
+        float: none;
+        margin: 0 auto;
+    }
+    .about .abouttext {
+        padding: 100px 0 0 0;
+    }
+}
+@media (max-width: 600px) {
+    .headshot {
+        height: 300px;
+        width: 300px;
+        img {
+            margin: -185px 0 0 -78px;
+        }
+    }
+     .about .abouttext {
+        padding: 100px 0 60px 0;
+            p {
+            font-size: 1.4rem;
+        }
+    }
+    .paralellogram {
+        h2 {
+            font-size: 2rem;
+        }
+    }  
+}
+@media (max-width: 450px) {
+    .headshot {
+        height: 200px;
+        width: 200px;
+        img {
+            margin: -117px 0 0 -46px;
+        }
+    }
+     .about .abouttext {
+        padding: 100px 0 60px 0;
+            p {
+            font-size: 1.2rem;
+        }
+    } 
+    .skills,
+    .learning {
+        font-size: 1.2rem;
+    } 
+}
+//**************************************************************||
+//                        PORTFOLIO                             ||
+//**************************************************************||
+.portfolio {
+    background: $teal;
+    clear: both;
+    padding: 50px 15% 50px 10%;
+    h2 {
+        color: $white;
+    }
+}
+.pfitem {
+    width: 100%;
+    background: $white;
+    margin: 50px 0;
+    padding: 20px;
+    position: relative;
+    .pfolioimg {
+        max-width: 100%;
+        // float: left;
+        img.attachment-full {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+.pfolioinfo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 100px;
+    background: $transblack;
+    width: 100%;
+    z-index: 100;
+    overflow: hidden;
+    color: $white;
+    display: none;
+    p {
+        font-size: 1.5rem;
+    }
+}
+.shortcontent {
+    display: none;
+}
+.thecontent {
+    a {
+        color: $white;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+.paralellogram2 {
+    background: $white;
+    padding: 10px 40px;
+    display: inline-block;
+    @include twentydeg;
+    p {
+        @include xthreethirty;
+            @include noSurprises;
+        a {
+            text-decoration: none;
+            font-size: 2em;
+            color: $black;
+        }
+    }
+}
+.paralellogram2:hover {
+    @include whiteblack;
+    @include defaultwhiteborder;
+    a {
+        @include whiteblack;
+    }
+}
+//RESPONSIVE****************************************************||
+@media (max-width: 1350px) {
+    .pfolioinfo {
+        padding: 70px;
+    }
+}
+@media (max-width: 1200px) {
+    .pfolioinfo {
+        padding: 50px;
+        h2 {
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+    }
+    .paralellogram2 {
+        p{
+            a{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+@media (max-width: 950px) {
+    .shortcontent {
+        display: block;
+    }
+    .thecontent {
+        display: none;
+    }
+}
+@media (max-width: 750px) {
+    .pfolioinfo {
+        padding: 40px;
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+    .shortcontent {
+        display: none;
+    }
+    .paralellogram2 {
+        margin: 30px 0 0 0;
+    }
+}
+@media (max-width: 550px) {
+    .pfolioinfo {
+        padding: 20px;
+        // h2 {
+        //     font-size: 1rem;
+        // }
+    }
+}
+@media (max-width: 450px) {
+    .portfolio {
+        padding: 40px 10px;
+       // .pfoilioinfo {
+       //      padding: 10px;
+       //  } 
+    }
+}
+//**************************************************************||
+//                      SINGLE PORTFOLIO                        ||
+//**************************************************************||
+.single-portfolio-wrapper {
+    width: 100%;
+    background: $teal;
+    padding: 60px 10%;
+    .single-item{
+        width: 80%;
+        background: $white;
+        padding: 40px;
+        h3 {
+            padding: 30px;
+        }
+        h2 {
+            color: $white;
+        }
+        img {
+            max-width: 100%;
+        }
+        .paralellogram {
+            border: 3px solid $black;
+            // &:hover {
+            //     border: 3px solid $black;
+            //     background: $white;
+            //     a {
+            //         color: $black;
+            //     }
+            // }
+        }
+    }
+}
+.fixlink {
+    a {
+        &:hover {
+            color: $black;
+            text-decoration: underline;
+        }
+    }
+}
+//Responsive
+@media (max-width: 700px) {
+    .single-portfolio-wrapper {
+        padding: 50px;
+        .single-item {
+            width: 100%;
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+@media (max-width: 400px) {
+    .single-portfolio-wrapper {
+        padding: 30px;
+        .single-item {
+            padding: 20px;
+            h3 {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+//**************************************************************||
+//                         BLOG ARCHIVE                         ||
+//**************************************************************||
+.blogwrap {
+    width: 100%;
+    padding: 0 10% 60px 10%;
+    background: $teal;
+}
+.blogpost {
+    width:80%;
+    background: $white;
+    // float: left;
+    padding: 40px;
+    margin-bottom: 50px;
+    &:nth-child(2n-1) {
+        margin-right: 4%;
+    }
+    h2 {
+        color: $white;
+        font-size: 2rem;
+    }
+    p {
+        @include blog-p;
+    }
+    .blogimg {
+        img {
+        max-width: 100%;
+        height: auto;
+        padding: 40px 0;
+        }
+    }
+}
+.paralellogramlink {
+    border: 3px solid $black;
+    background: $black;
+    padding: 10px 40px;
+    display: inline-block;
+    @include twentydeg;
+    p {
+        @include noSurprises;
+        @include xthreethirty;
+        a {
+            text-decoration: none;
+            color: $white;
+            font-size: 2rem;
+            font-family: Questrial, sans-serif;
+        }
+    }
+}
+.paralellogramlink:hover {
+        background: $white;
+        border: 3px solid $black;
+        a {
+            color: $black;
+        }
+    }
+//RESPONSIVE****************************************************||
+@media (max-width: 950px) {
+    .blogpost {
+        width: 80%;
+    }
+}
+@media (max-width: 800px) {
+    .blogpost {
+        width: 100%;
+    }
+}
+//**************************************************************||
+//                          SINGLE BLOG                         ||
+//**************************************************************||
+.single-blog-wrapper {
+    padding: 0 10% 60px 10%;
+    width: 100%;
+    background: $teal;
+    .blogpost2 {
+        width:80%;
+        background: $white;
+        float: left;
+        padding: 40px;
+        margin-top: 50px;
+        p {
+            @include blog-p;
+            a {
+                background: #FAF061;
+                &:hover {
+                    background: lighten(#FAF061, 10%);
+                    color: $black;
+                }
+            }
+            a[href$=".jpg"],
+            a[href$=".jpeg"],
+            a[href$=".png"],
+            a[href$=".gif"] {
+               background: none;
+            }
+        }
+        pre {
+            font-family: Inconsolata, Courier;
+            background: darken($white, 10%);
+            padding: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .single-link-1 {
+            background: $black;
+            color: $white;
+            text-decoration: none;
+            padding: 3px;
+            border: 2px solid $black;
+            &:nth-child(2) {
+                text-align: right;
+            }
+            &:hover {
+                border: 2px solid $black;
+                background: $white;
+                color: $black;
+            }
+        }
+    }
+    .blogimg {
+        img {
+        max-width: 100%;
+        height: auto;
+        padding: 40px 0;
+        }
+    }
+}
+@media (max-width: 800px) {
+    .single-blog-wrapper {
+        .blogpost2 {
+            width: 100%;
+        }
+    }
+}
+//**************************************************************||
+//                           FORM                               ||
+//**************************************************************||
+.contact {
+    background: $teal;
+    padding: 60px 30% 40px 10%;
+    z-index: -100;
+}
+.formwrapper {
+    // margin: 0 10% 0 30%;
+    width: 100%;
+}
+.wpcf7 p {
+    color: $white;
+    font-size: 1.2em;
+}
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 textarea {
+    @include defaultwhiteborder;
+    background-color: $teal;
+    padding: 10px;
+    font-size: 1.5rem;
+    color: $black;
+    width: 100%;
+    outline: 0;
+}
+.wpcf7 input[type="text"]:hover,
+.wpcf7 input[type="email"]:hover,
+.wpcf7 textarea:hover {
+    background: $transwhite;
+}
+.wpcf7 input[type="text"]:focus,
+.wpcf7 input[type="email"]:focus,
+.wpcf7 textarea:focus {
+    background: $transwhite;
+}
+.wpcf7 input[type="submit"] {
+    @include whiteblack;
+    border: 3px solid $black;
+    outline: 0;
+    padding: 10px 40px;
+    // border-radius: 10px;
+    // margin: 24px 0 0 0;
+    @include twentydeg;
+    font-size: 2rem;        
+    &:hover {
+        background: $white;
+        color: $black;
+        border: 3px solid $black;
+    }
+    &:focus {
+        background: $teal;
+        color: $white;
+        border: 3px solid $black;
+    }
+}
+.wpcf7 input[value="send"] {
+    @include xthreethirty;  
+}
+.diamondsend {
+    @include whiteblack;
+    border: 3px solid $black;
+    height: 90px;
+    width: 90px;
+    border-radius: 3px;
+    @include rotatefortyfive;
+    &:hover {
+        @include defaultwhiteborder;
+        background: $teal;
+    }
+}
+span.wpcf7-list-item { 
+    display: block; 
+}
+//RESPONSIVE****************************************************||
+@media (max-width: 800px) {
+    .contact {
+        padding: 60px 10% 40px 10%;
+    }
+}
+
+//**************************************************************||
+//                           FOOTER                             ||
+//**************************************************************||
+.footer {
+    width: 100%;
+    @include whiteblack;
+}
+.footerleft {
+    width: 50%;
+    float: left;
+    ul {
+        list-style: none;
+        li {
+            a {
+            margin: 20px;
+            float: left;
+            color: $white;
+            }
+        }
+    }
+}
+.diamond {
+    @include defaultwhiteborder;
+    padding: 10px;
+    width: 70px;
+    height: 70px;
+    @include rotatefortyfive;
+    &:hover {
+        background: $white;
+        color: $black;
+    }
+    i {
+        // margin: auto;
+        @include rotatethreefifteen;
+    }
+}
+.footerright {
+    width: 50%;
+    float: right;
+}
