@@ -14,6 +14,12 @@
    		wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", false, null, true);
    		wp_enqueue_script('jquery');
 	}
+  function site_scripts() {
+    wp_register_script();
+    wp_register_script();
+    wp_enqueue_style('style-name', 'get_stylesheet_uri()');
+    wp_enqueue_script()
+  }
  
 	function get_my_header() {
   		// if is home, which is the front page
