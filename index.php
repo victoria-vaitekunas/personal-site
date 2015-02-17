@@ -1,7 +1,11 @@
 <!-- this is what pulls bolgs -->
 <?php get_header(); ?>
 <?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; 
-	$the_query = new WP_Query( 'cat=1&paged' . $paged ); ?> 
+	$args = array(
+		'posts_per_page'=> 6,
+		'paged' => $paged
+	);
+	$the_query = new WP_Query( $args ); ?> 
 	<?php if ( $the_query->have_posts() ) : ?>
 		<div class="blogwrap clearfix">
 		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
@@ -19,10 +23,7 @@
 			</div>
 		</div><!-- /.blogpost -->
 	<?php endwhile; ?>
-	<?php 
-	next_posts_link('Older Entries', $the_query->max_num_pages );
-	previous_posts_link('Newer Entries');
-	?>
+	<?php wp_pagination(); ?>
 	</div><!-- /.blogwrap -->
 	<?php wp_reset_postdata(); ?>
 <?php else: ?>
