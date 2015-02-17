@@ -1,13 +1,15 @@
 <?php 
-
+  
+  //need featured images
 	add_theme_support('post-thumbnails');
 
-
+  //just nav things
 	function register_my_menu() {
   		register_nav_menu('header-menu',__( 'Header Menu' ));	
 	}
 	add_action( 'init', 'register_my_menu' );
 
+  //conditionally load prism.js only where needed
   function syntax_hi() {
     if(is_singular() || is_archive()) {
       wp_register_style('prismcss', get_bloginfo('template_url') . '/css/prism.css', false, null, null);
@@ -18,6 +20,7 @@
   }
   add_action('wp_enqueue_scripts', 'syntax_hi');
 
+  //load rest of the scripts,styles
   function load_scripts() {
     //no wp jquery
     wp_deregister_script('jquery');
@@ -33,7 +36,7 @@
   }
   add_action('wp_enqueue_scripts','load_scripts');
 
- 
+  //different header on front page
 	function get_my_header() {
   		// if is home, which is the front page
   		if(is_front_page()) {
@@ -44,11 +47,34 @@
     		get_header();
   		}
 	}
-    add_filter('next_post_link', 'post_link_attributes');
-    add_filter('previous_post_link', 'post_link_attributes');
+  
+  //add custom class to single post prev/next links  
+  add_filter('next_post_link', 'post_link_attributes');
+  add_filter('previous_post_link', 'post_link_attributes');
 
-    function post_link_attributes($output) {
-        $code = 'class="single-link-1"';
-        return str_replace('<a href=', '<a '.$code.'href=', $output);
+  function post_link_attributes($output) {
+    $code = 'class="single-link-1"';
+      return str_replace('<a href=', '<a '.$code.'href=', $output);
     }
+  //paaaaaaaginate
+  function wp_pagination() {
+    global $wp_query;
+    $big = 9999999999;
+    $page_format = paginate_links( array(
+      'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ))),
+      'format' => '?paged=%#%',
+      'current' => max( 1, get_query_var('paged')),
+      'total' => $wp_query->max_num_pages,
+      'type' => 'array' 
+      ));
+    if( is_array($page_format) ) {
+      $paged =( get_query_var('paged') == 0 ) ? 1 : get_query_var('paged');
+      echo '<div class="pagination"><ul>';
+      echo '<li><span>' . $paged . ' of ' . $wp_query->max_num_pages . '</span></li>';
+      foreach ( $page_format as $page ) {
+        echo "<li>$page</li>";
+      }
+      echo '</ul></div>';
+    }
+  }
 ?>
