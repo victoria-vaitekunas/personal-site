@@ -1,7 +1,11 @@
 <!-- this is what pulls bolgs -->
 <?php get_header(); ?>
-	<div class="blogwrap clearfix">
-	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+<?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; 
+	$the_query = new WP_Query( 'cat=1&paged' . $paged ); ?> 
+	<?php if ( $the_query->have_posts() ) : ?>
+		<div class="blogwrap clearfix">
+		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+	
 		<div class="blogpost">
 			<div class="paralellogram">	
 				<h2><?php the_title(); ?></h2>
@@ -15,5 +19,13 @@
 			</div>
 		</div><!-- /.blogpost -->
 	<?php endwhile; ?>
+	<?php 
+	next_posts_link('Older Entries', $the_query->max_num_pages );
+	previous_posts_link('Newer Entries');
+	?>
 	</div><!-- /.blogwrap -->
+	<?php wp_reset_postdata(); ?>
+<?php else: ?>
+	<p><?php _e("Sorry, no posts found."); ?></p>
+<?php endif; ?>
 <?php get_footer(); ?>
