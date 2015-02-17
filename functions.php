@@ -30,8 +30,6 @@
     //add custom js
     wp_register_script('custom_js', get_bloginfo('template_url') . '/js/script.js', array('jquery'), null, true);
     wp_enqueue_script('custom_js');
-    //wp_enqueue_style('style-name', 'get_stylesheet_uri()');
-    //wp_enqueue_script()
   }
   add_action('wp_enqueue_scripts','load_scripts');
 
