@@ -9,6 +9,7 @@
 					<?php echo the_post_thumbnail('full'); ?>
 				</div>
 				<p><?php the_content(); ?></p>
+				<?php make_category_links(); ?>
 				
 				<?php previous_post_link('%link','previous'); ?>
 				<?php next_post_link('%link','next'); ?>
