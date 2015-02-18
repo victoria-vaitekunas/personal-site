@@ -1,13 +1,11 @@
 <?php get_header(); ?>
-	<?php $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1; 
-		$args = array(
-			'posts_per_page'=> 6,
-			'paged' => $paged
-		);
-		$the_query = new WP_Query( $args ); ?> 
-		<?php if ( $the_query->have_posts() ) : ?>
-			<div class="blogwrap clearfix">
-			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+<?php if ( have_posts() ) : ?>
+		<div class="blogwrap clearfix">
+		<?php single_cat_title( '', false);  ?>
+		<?php if ( category_description() ) : ?>
+			<?php echo category_description(); ?>
+			<?php endif; ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 			<div class="blogpost">
 				<div class="paralellogram">	
 					<h2><?php the_title(); ?></h2>
@@ -19,12 +17,11 @@
 				<div class="paralellogramlink">
 					<p><a href="<?php echo get_permalink(); ?>">Read more</a></p>
 				</div>
+				<?php make_category_links(); ?>
 			</div><!-- /.blogpost -->
 		<?php endwhile; ?>
 		<?php wp_pagination(); ?>
 		</div><!-- /.blogwrap -->
-		<?php wp_reset_postdata(); ?>
-	<?php else: ?>
-		<p><?php _e("Sorry, no posts found."); ?></p>
-	<?php endif; ?>
+		<?php else: ?>
+		<?php endif; ?>	
 <?php get_footer(); ?>
