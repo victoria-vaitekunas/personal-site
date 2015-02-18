@@ -77,6 +77,7 @@
       echo '</ul></div>';
     }
   }
+  //link caaaaategories
   function make_category_links() {
     $categories = get_the_category();
     $separator = ' ';
