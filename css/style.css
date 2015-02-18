@@ -834,6 +834,16 @@ p a:hover {
   background: #00d1c3;
 }
 
+.cat-descrip {
+  color: #f7f7f7;
+  background: #2b2a2a;
+  padding: 0px 20px;
+  display: inline-block;
+  margin: 40px 0px 0px;
+  border-top-right-radius: 18px;
+  border-top-left-radius: 18px;
+}
+
 .blogpost {
   width: 80%;
   background: #f7f7f7;
@@ -891,6 +901,25 @@ p a:hover {
 }
 .paralellogramlink:hover a {
   color: #2b2a2a;
+}
+
+.pagination ul {
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+  padding: 5px;
+  background: #2b2a2a;
+  color: #f7f7f7;
+}
+.pagination ul li {
+  display: inline-block;
+  margin: 0px 5px;
+}
+.pagination ul li a {
+  color: #f7f7f7;
+}
+.pagination ul li span {
+  margin: 0px 10px;
 }
 
 @media (max-width: 950px) {

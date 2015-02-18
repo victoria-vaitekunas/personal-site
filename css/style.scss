@@ -716,6 +716,15 @@ p {
     padding: 0 10% 60px 10%;
     background: $teal;
 }
+.cat-descrip {
+    color: $white;
+    background: $black;
+    padding: 0px 20px;
+    display: inline-block;
+    margin: 40px 0px 0px;
+    border-top-right-radius: 18px;
+    border-top-left-radius: 18px;
+}
 .blogpost {
     width:80%;
     background: $white;
@@ -764,6 +773,26 @@ p {
             color: $black;
         }
     }
+.pagination {
+    ul {
+        list-style: none;
+        display: inline-block;
+        margin: 0;
+        padding: 5px;
+        background: $black;
+        color: $white;
+        li {
+            display: inline-block;
+            margin: 0px 5px;
+            a{
+                color: $white;
+            }
+            span {
+                margin: 0px 10px;
+            }
+        }
+    }
+}
 //RESPONSIVE****************************************************||
 @media (max-width: 950px) {
     .blogpost {
