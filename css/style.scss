@@ -718,17 +718,22 @@ p {
 }
 .cat-descrip {
     color: $white;
-    background: $black;
-    padding: 0px 20px;
-    display: inline-block;
-    margin: 40px 0px 0px;
-    border-top-right-radius: 18px;
-    border-top-left-radius: 18px;
+    //background: $black;
+    //padding: 0px 20px;
+    font-size: 3rem;
+    text-shadow: 1px 1px 1px $transblack2;
+    //display: inline-block;
+    //margin: 40px 0px 0px;
+    //border-top-right-radius: 18px;
+    //border-top-left-radius: 18px;
+    p {
+        margin: 0;
+    }
 }
 .blogpost {
     width:80%;
     background: $white;
-    // float: left;
+    position: relative;
     padding: 40px;
     margin-bottom: 50px;
     &:nth-child(2n-1) {
@@ -749,6 +754,19 @@ p {
         }
     }
 }
+    p.cat-link {
+        font-size: 0.8rem;
+        position: absolute;
+        right: 40px;
+        bottom: 22px;
+        a {
+            background: #FAF061;
+            &:hover {
+                background: lighten(#FAF061, 10%);
+                color: $black;
+            }
+        }
+    }
 .paralellogramlink {
     border: 3px solid $black;
     background: $black;
@@ -817,6 +835,7 @@ p {
         float: left;
         padding: 40px;
         margin-top: 50px;
+        position: relative;
         p {
             @include blog-p;
             a {
@@ -831,6 +850,19 @@ p {
             a[href$=".png"],
             a[href$=".gif"] {
                background: none;
+            }
+        }
+        p.cat-link {
+            font-size: 0.8rem;
+            position: absolute;
+            right: 40px;
+            bottom: 22px;
+            a {
+                background: #FAF061;
+                &:hover {
+                    background: lighten(#FAF061, 10%);
+                    color: $black;
+                }
             }
         }
         // pre {

@@ -836,17 +836,17 @@ p a:hover {
 
 .cat-descrip {
   color: #f7f7f7;
-  background: #2b2a2a;
-  padding: 0px 20px;
-  display: inline-block;
-  margin: 40px 0px 0px;
-  border-top-right-radius: 18px;
-  border-top-left-radius: 18px;
+  font-size: 3rem;
+  text-shadow: 1px 1px 1px rgba(43, 42, 42, 0.4);
+}
+.cat-descrip p {
+  margin: 0;
 }
 
 .blogpost {
   width: 80%;
   background: #f7f7f7;
+  position: relative;
   padding: 40px;
   margin-bottom: 50px;
 }
@@ -866,6 +866,20 @@ p a:hover {
   max-width: 100%;
   height: auto;
   padding: 40px 0;
+}
+
+p.cat-link {
+  font-size: 0.8rem;
+  position: absolute;
+  right: 40px;
+  bottom: 22px;
+}
+p.cat-link a {
+  background: #FAF061;
+}
+p.cat-link a:hover {
+  background: #fcf592;
+  color: #2b2a2a;
 }
 
 .paralellogramlink {
@@ -943,6 +957,7 @@ p a:hover {
   float: left;
   padding: 40px;
   margin-top: 50px;
+  position: relative;
 }
 .single-blog-wrapper .blogpost2 p {
   font-family: Cardo, Garamond, serif;
@@ -961,6 +976,19 @@ p a:hover {
 .single-blog-wrapper .blogpost2 p a[href$=".png"],
 .single-blog-wrapper .blogpost2 p a[href$=".gif"] {
   background: none;
+}
+.single-blog-wrapper .blogpost2 p.cat-link {
+  font-size: 0.8rem;
+  position: absolute;
+  right: 40px;
+  bottom: 22px;
+}
+.single-blog-wrapper .blogpost2 p.cat-link a {
+  background: #FAF061;
+}
+.single-blog-wrapper .blogpost2 p.cat-link a:hover {
+  background: #fcf592;
+  color: #2b2a2a;
 }
 .single-blog-wrapper .blogpost2 img {
   max-width: 100%;
