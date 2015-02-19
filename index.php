@@ -18,10 +18,10 @@
 				<?php echo the_post_thumbnail('full'); ?>
 			</div>
 			<p><?php the_excerpt(); ?></p>	
-			<?php make_category_links(); ?>
 			<div class="paralellogramlink">
 				<p><a href="<?php echo get_permalink(); ?>">Read more</a></p>
 			</div>
+			<?php make_category_links(); ?>
 		</div><!-- /.blogpost -->
 	<?php endwhile; ?>
 	<?php wp_pagination(); ?>
