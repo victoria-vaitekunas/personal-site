@@ -83,14 +83,14 @@
     $separator = ' ';
     $output = '';
     if ($categories){
-      echo '<p>';
-      echo 'Read more on ';
+      echo '<p class="cat-link">';
+      //echo 'Read more on ';
       foreach($categories as $category) {
         $output .= '<a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">'.$category->cat_name.'</a>'.$separator;
         //echo get_category_link($category->term_id);
       }
       echo trim($output, $separator);
-      echo '.</p>';
+      echo '</p>';
     }
   }
 ?>
