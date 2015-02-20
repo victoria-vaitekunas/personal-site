@@ -28,7 +28,7 @@
     wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", false, null, true);
     wp_enqueue_script('jquery');
     //get css
-    wp_register_style('custom_css', get_bloginfo('template_url') . '/css/style.css', false, null, null);
+    wp_register_style('custom_css', get_bloginfo('template_url') . '/css/new-css/style.css', false, null, null);
     wp_enqueue_style('custom_css');
     //add custom js
     wp_register_script('custom_js', get_bloginfo('template_url') . '/js/script.js', array('jquery'), null, true);
