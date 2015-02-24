@@ -7,6 +7,7 @@
 	);
 	$the_query = new WP_Query( $args ); ?> 
 	<?php if ( $the_query->have_posts() ) : ?>
+	<div class="content-wrapper">
 		<div class="blogwrap clearfix">
 		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 	
@@ -26,6 +27,7 @@
 	<?php endwhile; ?>
 	<?php wp_pagination(); ?>
 	</div><!-- /.blogwrap -->
+</div><!-- /.content-wrapper -->
 	<?php wp_reset_postdata(); ?>
 <?php else: ?>
 	<p><?php _e("Sorry, no posts found."); ?></p>

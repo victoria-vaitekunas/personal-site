@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+	<div class="content-wrapper">
 		<div class="single-portfolio-wrapper">
 			<div class="single-item">	
 				<div class="paralellogram">
@@ -17,5 +18,6 @@
 					</div>
 			</div>
 		</div><!-- /.single-portfolio-wrapper -->
+	</div><!-- /.content-wrapper -->
 	<?php endwhile; ?>	
 <?php get_footer(); ?>

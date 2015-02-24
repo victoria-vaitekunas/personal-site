@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+	<div class="content-wrapper">
 		<div class="single-blog-wrapper clearfix">
 			<div class="blogpost2">
 				<div class="paralellogram">	
@@ -15,5 +16,6 @@
 				<?php next_post_link('%link','next'); ?>
 			</div><!-- /.single-blog -->
 		</div><!-- /.single-blog-wrapper -->
+	</div><!-- /.content-wrapper -->
 	<?php endwhile; ?>
 <?php get_footer(); ?>

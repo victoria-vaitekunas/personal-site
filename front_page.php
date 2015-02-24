@@ -115,6 +115,7 @@ Template Name: Front Page Template
 			  <div class="size side4"></div>
 			</div>
 	</div><!-- /.supercontainer -->
+	<div class="content-wrapper">
 	<div class="about clearfix">
 		<?php $about = new WP_Query(
 			array(
@@ -203,5 +204,6 @@ Template Name: Front Page Template
 		<?php else:  ?>
 		<?php endif; ?>
 	</div><!-- /.portfolio -->
+	</div><!-- /.content-wrapper -->
 <?php get_footer(); ?>
 

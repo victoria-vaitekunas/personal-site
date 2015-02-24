@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 <?php if ( have_posts() ) : ?>
+	<div class="content-wrapper">
 		<div class="blogwrap clearfix">
 		<?php single_cat_title( '', false);  ?>
 		<?php if ( category_description() ) : ?>
@@ -22,6 +23,7 @@
 		<?php endwhile; ?>
 		<?php wp_pagination(); ?>
 		</div><!-- /.blogwrap -->
+	</div><!-- /.content-wrapper -->
 		<?php else: ?>
 		<?php endif; ?>	
 <?php get_footer(); ?>
