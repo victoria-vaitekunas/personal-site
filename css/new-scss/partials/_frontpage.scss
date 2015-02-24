@@ -32,3 +32,22 @@
 .aboutlist {
 	clear: both;
 }
+.aboutlist div {
+	display: inline-block;
+	width: 50%;
+	//float: left;
+	ul {
+		list-style: none;
+		li {
+			font-size: 2rem;
+			color: $white;
+		}
+	}
+}
+.skills,
+.learning {
+	float: left;
+}
+.portfolio {
+	padding-top: $top-padding;
+}
