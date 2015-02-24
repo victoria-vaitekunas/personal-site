@@ -1,0 +1,63 @@
+@mixin main-font {
+    font-family: Questrial, sans-serif;
+    color: $black;
+}
+@mixin blog-p {
+    font-family: Cardo, Garamond, serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+@mixin noSurprises {
+    padding: 0;
+    margin: 0;
+}
+@mixin defaultwhiteborder {
+    border: $borderwhite;
+    border-radius: 3px;
+}
+@mixin whiteblack {
+    color: $white;
+    background: $black;
+}
+@mixin thirtydeg {
+    -webkit-transform:skewy(30deg);
+    -moz-transform:skewy(30deg);
+    -ms-transform:skewy(30deg);
+    -o-transform:skewy(30deg);
+    transform:skewy(30deg);
+}
+@mixin threethirtydeg {
+    -webkit-transform:skewy(330deg);
+    -moz-transform:skewy(330deg);
+    -ms-transform:skewy(330deg);
+    -o-transform:skewy(330deg);
+    transform:skewy(330deg);
+}
+@mixin twentydeg {
+    -webkit-transform:skewx(20deg);
+    -moz-transform:skewx(20deg);
+    -ms-transform:skewx(20deg);
+    -o-transform:skewx(20deg);
+    transform:skewx(20deg);
+}
+@mixin xthreethirty {
+    -webkit-transform:skewx(330deg);
+    -moz-transform:skewx(330deg);
+    -ms-transform:skewx(330deg);
+    -o-transform:skewx(330deg);
+    transform:skewx(330deg);
+}
+@mixin rotatefortyfive {
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    transform:rotate(45deg);
+}
+@mixin rotatethreefifteen {
+    -webkit-transform:rotate(315deg);
+    -moz-transform:rotate(315deg);
+    -ms-transform:rotate(315deg);
+    -o-transform:rotate(315deg);
+    transform:rotate(315deg);
+}

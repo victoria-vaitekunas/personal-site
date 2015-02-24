@@ -1,0 +1,34 @@
+.content-wrapper {
+	background: $teal;
+	width: 100%;
+	margin-top: -70px;
+	padding: 0 16.66%;
+}
+.about {
+	padding-top: $top-padding;
+}
+.abouttext {
+    width: 50%;
+    // margin: 0 40% 0 10%;
+    float: left;
+    padding: 0 0 50px 0;
+}
+.headshot {
+    @include rotatefortyfive;
+    border: 5px solid $white;
+    height: 369px;
+    width: 369px;
+    overflow: hidden;
+    float: right;
+    margin: 120px 30px 0 0;
+    border-radius: 3px;
+    img {
+        @include rotatethreefifteen;
+        margin: -215px 0 0 -78px;
+        max-width: 145%;
+        height: auto;
+    }
+}
+.aboutlist {
+	clear: both;
+}

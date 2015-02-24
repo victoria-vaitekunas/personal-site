@@ -1,0 +1,9 @@
+.paralellogram {
+	@include twentydeg;
+	background: $black;
+    padding: 10px 40px;
+    display: inline-block;
+    h2 {
+    	@include xthreethirty;
+    }
+}
