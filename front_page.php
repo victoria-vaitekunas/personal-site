@@ -186,7 +186,17 @@ Template Name: Front Page Template
 			<?php while ( $portfolioitem->have_posts() ) : $portfolioitem->the_post(); ?>
 					<div class="pfitem clearfix">	
 						<div class="pfolioimg clearfix">
-							<?php echo the_post_thumbnail('full'); ?>
+						<div class="frame-wrapper">  
+  							<div class="frame">
+    							<div class="camera"></div>
+    							<div class="framedimage">
+									<?php echo the_post_thumbnail('full'); ?>
+								</div>
+								<div class="button"></div>
+  							</div><!-- /.frame -->
+  							<div class="base"></div>
+  							<div class="foot"></div>
+ 						</div><!-- /.frame-wrapper -->
 						</div><!-- /.pfoilioimg -->
 						<div class="pfolioinfo">
 							<h2><?php the_title(); ?></h2>
