@@ -19,6 +19,15 @@
     }
   }
   add_action('wp_enqueue_scripts', 'syntax_hi');
+  
+  //conditionally load flexslider.js where needed
+  function flex_it() {
+    if(is_front_page() ) {
+      wp_register_script('flexslider', get_bloginfo('template_url') . '/js/flexslider/jquery.flexslider.js', array('jquery'), null, true);
+      wp_enqueue_script('flexslider');
+    }
+  }
+  add_action('wp_enqueue_scripts', 'flex_it');
 
   //load rest of the scripts,styles
   function load_scripts() {
