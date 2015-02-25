@@ -2,10 +2,10 @@
 	background: $teal;
 	width: 100%;
 	margin-top: -70px;
-	padding: 0 16.66%;
+	padding: $top-padding 16.66% $half-padding 16.66%;
 }
 .about {
-	padding-top: $top-padding;
+	//padding-top: $top-padding;
 }
 .abouttext {
     width: 50%;
@@ -34,8 +34,6 @@
 }
 .aboutlist div {
 	display: inline-block;
-	width: 50%;
-	//float: left;
 	ul {
 		list-style: none;
 		li {
@@ -43,6 +41,12 @@
 			color: $white;
 		}
 	}
+}
+.skills {
+	width: 40%
+}
+.learning {
+	width: 60%;
 }
 .skills,
 .learning {
