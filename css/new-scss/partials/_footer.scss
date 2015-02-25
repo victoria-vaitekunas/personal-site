@@ -1,0 +1,53 @@
+.footer {
+    width: 100%;
+    @include whiteblack;
+}
+.footer-links {
+    float: left;
+    ul {
+        list-style: none;
+        display: block;
+        li {
+            float: left;
+            margin: $one-eight-padding;
+            a {
+                color: $white;
+            }
+        }
+    }
+}
+.diamond {
+    @include defaultwhiteborder;
+    padding: 14px;
+    width: $three-eight-padding;
+    height: $three-eight-padding;
+    @include rotatefortyfive;
+    &:hover {
+        @include hoverblack;
+    }
+    i {
+        // margin: auto;
+        @include rotatethreefifteen;
+    }
+}
+//RESPONSIVE
+@media(max-width: 750px) {
+    .footer-links {
+        width: 100%;
+        float: none;
+        ul {
+            margin: 0 auto;
+            li {
+                margin: $sixteenth;
+            }
+        }
+    }
+    .diamond {
+        width: $quarter-padding;
+        height: $quarter-padding;
+        padding: 9px;
+        i {
+            font-size: 2rem;
+        }
+    }
+}

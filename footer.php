@@ -1,5 +1,5 @@
 	<div class="footer clearfix">
-		<div class="footerleft">
+		<div class="footer-links clearfix">
 			<ul>
 				<li>
 					<a href="http://codepen.io/victoria-vaitekunas/"><div class="diamond">
@@ -22,9 +22,6 @@
 					</div></a>
 				</li> -->
 			</ul>
-		</div>
-		<div class="footerright">
-			
 		</div>
 	</div><!-- /.footer -->
 
