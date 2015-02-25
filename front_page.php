@@ -175,6 +175,8 @@ Template Name: Front Page Template
 		<div class="paralellogram">	
 			<h2 id="portfolio">Recent Work</h2>
 		</div>
+						<div class="flexslider">
+							<ul class="slides">	
 		<?php $portfolioitem = new WP_Query( 
 			array(
 				'posts_per_page' => -1,
@@ -184,35 +186,39 @@ Template Name: Front Page Template
 
 		<?php if ( $portfolioitem->have_posts() ) : ?>
 			<?php while ( $portfolioitem->have_posts() ) : $portfolioitem->the_post(); ?>
+								<li>
 					<div class="pfitem clearfix">	
-						<div class="pfolioimg clearfix">
-						<div class="frame-wrapper">  
-  							<div class="frame">
-    							<div class="camera"></div>
-    							<div class="framedimage">
-									<?php echo the_post_thumbnail('full'); ?>
-								</div>
-								<div class="button"></div>
-  							</div><!-- /.frame -->
-  							<div class="base"></div>
-  							<div class="foot"></div>
- 						</div><!-- /.frame-wrapper -->
-						</div><!-- /.pfoilioimg -->
-						<div class="pfolioinfo">
-							<h2><?php the_title(); ?></h2>
-							<div class="thecontent"><p><?php the_content(); ?></p></div>
-							<p class="shortcontent"><?php the_field('short_desc'); ?>, created for <?php the_field('client_name'); ?></p>
-							<div class="paralellogram2">	
-								<p><a href="<?php echo post_permalink();?>">More</a></p>
-							</div>
-						</div><!-- /.pfoilioinfo -->
+								<div class="pfolioimg clearfix">
+								<div class="frame-wrapper">  
+  									<div class="frame">
+    									<div class="camera"></div>
+    									<div class="framedimage">
+											<?php echo the_post_thumbnail('full'); ?>
+										</div>
+										<div class="button"></div>
+  									</div><!-- /.frame -->
+  									<div class="base"></div>
+  									<div class="foot"></div>
+ 								</div><!-- /.frame-wrapper -->
+								</div><!-- /.pfoilioimg -->
+								<div class="pfolioinfo">
+									<h2><?php the_title(); ?></h2>
+									<div class="thecontent"><p><?php the_content(); ?></p></div>
+									<p class="shortcontent"><?php the_field('short_desc'); ?>, created for <?php the_field('client_name'); ?></p>
+									<div class="paralellogram2">	
+										<p><a href="<?php echo post_permalink();?>">More</a></p>
+									</div>
+								</div><!-- /.pfoilioinfo -->
 					</div><!-- /.pfitem -->
+								</li>
 			<?php endwhile; ?>
 
 		  	<?php wp_reset_postdata(); ?>
 
 		<?php else:  ?>
 		<?php endif; ?>
+							</ul><!-- /.slides -->
+						</div><!-- /.flexslider -->
 	</div><!-- /.portfolio -->
 	</div><!-- /.content-wrapper -->
 <?php get_footer(); ?>
