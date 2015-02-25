@@ -1,5 +1,5 @@
 .frame-wrapper {
-	padding: 100px;
+	padding: $half-padding 0;
 }
 .frame {
   	padding: 1px 50px 50px;
@@ -20,6 +20,7 @@
   	height: auto;
   	max-width: 100%;
   	border-radius: 2px;
+  	border: 1px solid $transgrey;
   	}
 }
 .base {
@@ -78,4 +79,9 @@
   .camera {
     margin: 23px auto;
   }
+}
+//flexslider css override
+.flexslider {
+	border: 0;
+	background: none;
 }
