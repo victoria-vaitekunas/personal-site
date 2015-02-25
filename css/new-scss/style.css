@@ -8,7 +8,7 @@ Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
-@import url("font-awesome-4.1.0/css/font-awesome.min.css");
+@import url("../../css/font-awesome-4.1.0/css/font-awesome.min.css");
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block;
 }
@@ -348,11 +348,7 @@ p a:hover {
   background: #00D1C3;
   width: 100%;
   margin-top: -70px;
-  padding: 0 16.66%;
-}
-
-.about {
-  padding-top: 14rem;
+  padding: 14rem 16.66% 7rem 16.66%;
 }
 
 .abouttext {
@@ -512,4 +508,69 @@ p a:hover {
 .flexslider {
   border: 0;
   background: none;
+}
+
+.footer {
+  width: 100%;
+  color: #F7F7F7;
+  background: #2B2A2A;
+}
+
+.footer-links {
+  float: left;
+}
+.footer-links ul {
+  list-style: none;
+  display: block;
+}
+.footer-links ul li {
+  float: left;
+  margin: 1.75rem;
+}
+.footer-links ul li a {
+  color: #F7F7F7;
+}
+
+.diamond {
+  border: 3px solid #F7F7F7;
+  border-radius: 3px;
+  padding: 14px;
+  width: 5.25rem;
+  height: 5.25rem;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.diamond:hover {
+  background: #F7F7F7;
+  color: #2B2A2A;
+  -webkit-transition: 0.5s;
+          transition: 0.5s;
+}
+.diamond i {
+  -webkit-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  transform: rotate(315deg);
+}
+
+@media (max-width: 750px) {
+  .footer-links {
+    width: 100%;
+    float: none;
+  }
+  .footer-links ul {
+    margin: 0 auto;
+  }
+  .footer-links ul li {
+    margin: 0.875rem;
+  }
+
+  .diamond {
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 9px;
+  }
+  .diamond i {
+    font-size: 2rem;
+  }
 }
