@@ -61,3 +61,8 @@
     -o-transform:rotate(315deg);
     transform:rotate(315deg);
 }
+@mixin hoverblack {
+    background: $white;
+    color: $black;
+    transition: 0.5s;
+}
