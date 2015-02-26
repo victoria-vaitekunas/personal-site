@@ -16,7 +16,7 @@ h1 {
     }
 }
 h2 {
-    font-size: 3.5rem;
+    font-size: $quarter-padding;
     text-shadow: 1px 1px 2px $transblack2;
     color: $white;
     @include noSurprises;
@@ -41,5 +41,27 @@ p {
             color: $white;
             transition: 0.5s;
         }
+    }
+}
+//RESPONSIVE 
+@media (max-width: 750px) {
+    h1 {
+
+    }
+    h2 {
+        font-size: $sixteenth*3;
+    }
+    h3 {
+    }
+    p {
+        font-size: $one-eight-padding;
+    }
+}
+@media (max-width: 480px) {
+    h2 {
+        font-size: $one-eight-padding;
+    }
+    p {
+        font-size: 1.25rem;
     }
 }

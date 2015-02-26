@@ -1,7 +1,8 @@
 .content-wrapper {
 	background: $teal;
 	width: 100%;
-	margin-top: -70px;
+	//max-width: 1400px;
+	margin: -70px auto 0 auto;
 	padding: $top-padding 16.66% $half-padding 16.66%;
 }
 .about {
@@ -11,7 +12,10 @@
     width: 50%;
     // margin: 0 40% 0 10%;
     float: left;
-    padding: 0 0 50px 0;
+    padding: 0 $three-eight-padding $half-padding 0;
+    p {
+    	margin-top: $three-eight-padding;
+    }
 }
 .headshot {
     @include rotatefortyfive;
@@ -37,7 +41,6 @@
 	ul {
 		list-style: none;
 		li {
-			font-size: 2rem;
 			color: $white;
 		}
 	}
@@ -51,7 +54,72 @@
 .skills,
 .learning {
 	float: left;
+	padding-bottom: $half-padding;
+	li {
+		font-size: 2rem;
+	}
 }
 .portfolio {
-	padding-top: $top-padding;
+	padding-top: $half-padding;
+}
+//RESPONSIVE
+@media (max-width: 1300px) {
+	.abouttext {
+		clear: both;
+		width: 100%;
+		padding: 0 0 $half-padding 0;
+	}
+	.skills,
+	.learning {
+		width: 100%;
+		float: none;	
+	}
+}
+@media (max-width: 750px) {
+	.headshot {
+		margin: 0 auto;
+		float: none;
+		height: 300px;
+        width: 300px;
+        img {
+            margin: -185px 0 0 -78px;
+        }
+	}
+	.abouttext {
+		margin-top: $half-padding;
+	}
+	.skills,
+	.learning {
+		li {
+			font-size: $one-eight-padding;
+		}	
+	}
+	.portfolio {
+		padding-top: 0;
+	}
+}
+@media (max-width: 480px) {
+	.content-wrapper {
+		padding: $top-padding 8.33% $quarter-padding 8.33%;
+	}
+	.abouttext {
+		padding-bottom: $quarter-padding;
+		p {
+			margin-top: $one-eight-padding;
+		}
+	}
+	.skills,
+	.learning {
+		padding-bottom: $quarter-padding;
+		li {
+			font-size: 1.25rem;
+		}	
+	}
+	.headshot {
+        height: 200px;
+        width: 200px;
+        img {
+            margin: -117px 0 0 -46px;
+        }
+    }
 }
