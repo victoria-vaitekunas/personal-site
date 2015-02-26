@@ -232,6 +232,24 @@ p a:hover {
           transition: 0.5s;
 }
 
+@media (max-width: 750px) {
+  h2 {
+    font-size: 2.625rem;
+  }
+
+  p {
+    font-size: 1.75rem;
+  }
+}
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
+}
 .paralellogram {
   -webkit-transform: skewx(20deg);
   -ms-transform: skewx(20deg);
@@ -361,14 +379,17 @@ p a:hover {
 .content-wrapper {
   background: #00D1C3;
   width: 100%;
-  margin-top: -70px;
+  margin: -70px auto 0 auto;
   padding: 14rem 16.66% 7rem 16.66%;
 }
 
 .abouttext {
   width: 50%;
   float: left;
-  padding: 0 0 50px 0;
+  padding: 0 5.25rem 7rem 0;
+}
+.abouttext p {
+  margin-top: 5.25rem;
 }
 
 .headshot {
@@ -403,7 +424,6 @@ p a:hover {
   list-style: none;
 }
 .aboutlist div ul li {
-  font-size: 2rem;
   color: #F7F7F7;
 }
 
@@ -418,12 +438,83 @@ p a:hover {
 .skills,
 .learning {
   float: left;
+  padding-bottom: 7rem;
+}
+.skills li,
+.learning li {
+  font-size: 2rem;
 }
 
 .portfolio {
-  padding-top: 14rem;
+  padding-top: 7rem;
 }
 
+@media (max-width: 1300px) {
+  .abouttext {
+    clear: both;
+    width: 100%;
+    padding: 0 0 7rem 0;
+  }
+
+  .skills,
+  .learning {
+    width: 100%;
+    float: none;
+  }
+}
+@media (max-width: 750px) {
+  .headshot {
+    margin: 0 auto;
+    float: none;
+    height: 300px;
+    width: 300px;
+  }
+  .headshot img {
+    margin: -185px 0 0 -78px;
+  }
+
+  .abouttext {
+    margin-top: 7rem;
+  }
+
+  .skills li,
+  .learning li {
+    font-size: 1.75rem;
+  }
+
+  .portfolio {
+    padding-top: 0;
+  }
+}
+@media (max-width: 480px) {
+  .content-wrapper {
+    padding: 14rem 8.33% 3.5rem 8.33%;
+  }
+
+  .abouttext {
+    padding-bottom: 3.5rem;
+  }
+  .abouttext p {
+    margin-top: 1.75rem;
+  }
+
+  .skills,
+  .learning {
+    padding-bottom: 3.5rem;
+  }
+  .skills li,
+  .learning li {
+    font-size: 1.25rem;
+  }
+
+  .headshot {
+    height: 200px;
+    width: 200px;
+  }
+  .headshot img {
+    margin: -117px 0 0 -46px;
+  }
+}
 .frame-wrapper {
   padding: 7rem 0;
 }
@@ -552,7 +643,7 @@ p a:hover {
   position: relative;
   width: 66.64%;
   background: #F7F7F7;
-  margin-top: 7rem;
+  margin-top: 5.25rem;
   padding: 3.5rem 5.25rem 3.5rem 3.5rem;
 }
 .blogwrap .blogpost .blogimg img {
