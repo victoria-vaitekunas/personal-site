@@ -175,8 +175,8 @@ Template Name: Front Page Template
 		<div class="paralellogram">	
 			<h2 id="portfolio">Recent Work</h2>
 		</div>
-						<div class="flexslider">
-							<ul class="slides">	
+		<div class="flexslider">
+			<ul class="slides">	
 		<?php $portfolioitem = new WP_Query( 
 			array(
 				'posts_per_page' => -1,
@@ -217,9 +217,9 @@ Template Name: Front Page Template
 
 		<?php else:  ?>
 		<?php endif; ?>
-							</ul><!-- /.slides -->
-						</div><!-- /.flexslider -->
-	</div><!-- /.portfolio -->
-	</div><!-- /.content-wrapper -->
+		</ul><!-- /.slides -->
+	</div><!-- /.flexslider -->
+</div><!-- /.portfolio -->
+</div><!-- /.content-wrapper -->
 <?php get_footer(); ?>
 

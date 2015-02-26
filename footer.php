@@ -1,6 +1,6 @@
 	<div class="footer clearfix">
 		<div class="footer-links clearfix">
-			<ul>
+			<ul class="clearfix">
 				<li>
 					<a href="http://codepen.io/victoria-vaitekunas/"><div class="diamond">
 						<i class="fa fa-codepen fa-3x"></i>
