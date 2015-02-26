@@ -7,6 +7,8 @@
     ul {
         list-style: none;
         display: block;
+        padding: 0;
+        margin: $one-eight-padding 0 $one-eight-padding $three-eight-padding;
         li {
             float: left;
             margin: $one-eight-padding;
@@ -37,6 +39,8 @@
         float: none;
         ul {
             margin: 0 auto;
+            padding: $one-eight-padding 0;
+            width: 222px;
             li {
                 margin: $sixteenth;
             }
