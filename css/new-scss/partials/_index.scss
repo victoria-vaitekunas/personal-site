@@ -1,0 +1,22 @@
+.blogwrap {
+	.blogpost {
+		position: relative;
+		width: (16.66%)*4;
+		background: $white;
+		margin-top: $half-padding;
+		padding: $quarter-padding $three-eight-padding $quarter-padding $quarter-padding;
+		.blogimg {
+			img {
+				max-width: 100%;
+				height: auto;
+				padding: $one-eight-padding 0;
+			}
+		}
+	}
+}
+p.cat-link {
+    font-size: 0.8rem;
+    position: absolute;
+    right: 40px;
+    bottom: 22px;
+}
