@@ -246,6 +246,20 @@ p a:hover {
   transform: skewx(330deg);
 }
 
+.blogwrap p {
+  font-family: Cardo, Garamond, serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #2B2A2A;
+}
+.blogwrap p a {
+  background: #FAF061;
+}
+.blogwrap p a:hover {
+  background: #fcf592;
+  color: #2B2A2A;
+}
+
 .supercontainer {
   width: 100%;
   padding: 0;
@@ -510,6 +524,50 @@ p a:hover {
   background: none;
 }
 
+.flex-direction-nav a {
+  position: fixed;
+  top: 50%;
+}
+
+.flex-direction-nav .flex-prev {
+  left: 175px;
+}
+
+.flex-direction-nav .flex-next {
+  right: 175px;
+  text-align: right;
+}
+
+.flexslider:hover .flex-direction-nav .flex-prev {
+  opacity: 0.7;
+  left: 175px;
+}
+
+.flexslider:hover .flex-direction-nav .flex-next {
+  opacity: 0.7;
+  right: 175px;
+}
+
+.blogwrap .blogpost {
+  position: relative;
+  width: 66.64%;
+  background: #F7F7F7;
+  margin-top: 7rem;
+  padding: 3.5rem 5.25rem 3.5rem 3.5rem;
+}
+.blogwrap .blogpost .blogimg img {
+  max-width: 100%;
+  height: auto;
+  padding: 1.75rem 0;
+}
+
+p.cat-link {
+  font-size: 0.8rem;
+  position: absolute;
+  right: 40px;
+  bottom: 22px;
+}
+
 .footer {
   width: 100%;
   color: #F7F7F7;
@@ -522,6 +580,8 @@ p a:hover {
 .footer-links ul {
   list-style: none;
   display: block;
+  padding: 0;
+  margin: 1.75rem 0 1.75rem 5.25rem;
 }
 .footer-links ul li {
   float: left;
@@ -544,8 +604,8 @@ p a:hover {
 .diamond:hover {
   background: #F7F7F7;
   color: #2B2A2A;
-  -webkit-transition: 0.5s;
-          transition: 0.5s;
+  -webkit-transition: 0.6s;
+          transition: 0.6s;
 }
 .diamond i {
   -webkit-transform: rotate(315deg);
@@ -560,6 +620,8 @@ p a:hover {
   }
   .footer-links ul {
     margin: 0 auto;
+    padding: 1.75rem 0;
+    width: 222px;
   }
   .footer-links ul li {
     margin: 0.875rem;
