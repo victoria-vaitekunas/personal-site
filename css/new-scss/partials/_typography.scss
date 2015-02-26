@@ -7,3 +7,8 @@
     	@include xthreethirty;
     }
 }
+.blogwrap {
+	p {
+		@include blog-p;
+	}
+}
