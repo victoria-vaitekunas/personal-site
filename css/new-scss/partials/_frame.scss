@@ -85,3 +85,22 @@
 	border: 0;
 	background: none;
 }
+.flex-direction-nav a {
+  position: fixed;
+  top: 50%;
+}
+.flex-direction-nav .flex-prev {
+  left: 175px;
+}
+.flex-direction-nav .flex-next {
+  right: 175px;
+  text-align: right;
+}
+.flexslider:hover .flex-direction-nav .flex-prev {
+  opacity: 0.7;
+  left: 175px;
+}
+.flexslider:hover .flex-direction-nav .flex-next {
+  opacity: 0.7;
+  right: 175px;
+}
