@@ -44,8 +44,8 @@
     wp_register_style('custom_css', get_bloginfo('template_url') . '/css/new-scss/style.css', false, null, null);
     wp_enqueue_style('custom_css');
     //add custom js
-    //wp_register_script('custom_js', get_bloginfo('template_url') . '/js/script.js', array('jquery'), null, true);
-    //wp_enqueue_script('custom_js');
+    wp_register_script('custom_js', get_bloginfo('template_url') . '/js/script.js', array('jquery'), null, true);
+    wp_enqueue_script('custom_js');
   }
   add_action('wp_enqueue_scripts','load_scripts');
 

@@ -278,6 +278,62 @@ p a:hover {
   color: #2B2A2A;
 }
 
+.hamburger {
+  width: 1.75rem;
+  height: 1.75rem;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border: 3px solid #F7F7F7;
+  border-radius: 3px;
+  position: fixed;
+  top: 3.5rem;
+  right: 3.5rem;
+}
+.hamburger i {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.shownav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background: rgba(43, 42, 42, 0.9);
+  z-index: 100;
+}
+.shownav ul {
+  display: inline-block;
+  list-style: none;
+  float: right;
+  margin: 7rem;
+  padding: 0;
+}
+.shownav ul li:first-child {
+  border-top: 1px solid #F7F7F7;
+}
+.shownav ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 1.75rem;
+  border-bottom: 1px solid #F7F7F7;
+}
+
+@media (max-width: 480px) {
+  .shownav ul {
+    margin: 7rem auto 0;
+    float: none;
+    display: block;
+    width: 158px;
+  }
+}
 .supercontainer {
   width: 100%;
   padding: 0;
