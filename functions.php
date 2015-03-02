@@ -20,7 +20,7 @@
   }
   add_action('wp_enqueue_scripts', 'syntax_hi');
   
-  //conditionally load flexslider.js where needed
+  //conditionally load flexslider.js+smoothscroll where needed
   function flex_it() {
     if(is_front_page() ) {
       wp_register_style('flex-css', get_bloginfo('template_url') . '/js/flexslider/flexslider.css', false, null, null);
@@ -46,6 +46,8 @@
     //add custom js
     wp_register_script('custom_js', get_bloginfo('template_url') . '/js/script.js', array('jquery'), null, true);
     wp_enqueue_script('custom_js');
+      wp_register_script('smoothysmooth', get_bloginfo('template_url') . '/js/smoothscroll.js', array('jquery'), null, true);
+      wp_enqueue_script('smoothysmooth');
   }
   add_action('wp_enqueue_scripts','load_scripts');
 
