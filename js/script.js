@@ -54,11 +54,11 @@ $(document).ready(function(){
 	// $('.nav2').on('click', '.hamburger2 i', function(){
 	// 	$('#nav2').toggleClass("shownav navigation2");
 	// });
-	$('.nav').on('click', '.hamburger', function(){
-		$('#nav').toggleClass("hidden shownav");
+	$('.navjs').on('click', '.hamburger', function(){
+		$('#nav').fadeIn('slow').toggleClass("hidden shownav");
 	});
-	$('.nav').on('click', '#nav ul li a', function(){
-		$('#nav').toggleClass("shownav hidden");
+	$('.navjs').on('click', '#nav', function(){
+		$('#nav').fadeOut('slow');
 		console.log('click');
 	});
 });
