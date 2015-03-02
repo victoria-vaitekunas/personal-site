@@ -12,7 +12,7 @@
 <body>
 	<!-- start nav -->
 	<h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
-	<div class="nav">
+	<div class="nav navjs">
 			<div class="hamburger"><i class="fa fa-navicon fa-4x"></i></div>
 			<!-- <div> -->	
 				<!-- <ul id="nav" class="shownav">
