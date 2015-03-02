@@ -278,6 +278,14 @@ p a:hover {
   color: #2B2A2A;
 }
 
+.nav2 {
+  background: #00D1C3;
+  padding: 1px;
+}
+.nav2 h1 a {
+  color: #F7F7F7;
+}
+
 .hamburger {
   width: 1.75rem;
   height: 1.75rem;

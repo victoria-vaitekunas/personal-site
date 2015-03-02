@@ -1,8 +1,9 @@
-.nav {
-	// position: fixed;
-	// top: 0;
-	// width: 100%;
-	// background: $white;
+.nav2 {
+	background: $teal;
+	padding: 1px;
+	h1 a {
+		color: $white; 
+	}
 }
 .hamburger {
 	width: $one-eight-padding;
