@@ -62,6 +62,8 @@
     .container {
         width: 50%;
     }
+    .container:nth-child(5),
+    .container:nth-child(6), 
     .container:nth-child(7),
     .container:nth-child(8),
     .container:nth-child(9) {
@@ -73,9 +75,7 @@
         width: 100%
     }
     .container:nth-child(3),
-    .container:nth-child(4),
-    .container:nth-child(5),
-    .container:nth-child(6) {
+    .container:nth-child(4) {
         display: none;
     }
 }

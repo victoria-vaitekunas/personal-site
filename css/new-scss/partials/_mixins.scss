@@ -4,13 +4,13 @@
 }
 @mixin blog-p {
     font-family: Cardo, Garamond, serif;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 1.6;
     color: $black;
     a {
-        background: #FAF061;
+        background: $highlighter;
         &:hover {
-            background: lighten(#FAF061, 10%);
+            background: $lighthilight;
             color: $black;
         }
     }

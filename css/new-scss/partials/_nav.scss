@@ -50,6 +50,21 @@
 	}
 }
 @media (max-width: 480px) {
+	.nav,
+	.nav2 {
+		background: $black;
+		position: fixed;
+		width: 100%;
+		z-index: 10;
+		box-shadow: 1px 1px 10px $transblack;
+		h1 a {
+			color: $white;
+		}
+	}
+	.hamburger {
+		top: $one-eight-padding;
+		right: $one-eight-padding;
+	}
 	.shownav ul {
 		margin: $half-padding auto 0;
 		float: none;

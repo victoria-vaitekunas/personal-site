@@ -1,7 +1,14 @@
+.content-wrapper {
+	background: $teal;
+	width: 100%;
+	//max-width: 1400px;
+	margin: 0 auto;
+	padding: $half-padding 16.66%;
+}
 .blogwrap {
 	.blogpost {
 		position: relative;
-		width: (16.66%)*4;
+		width: (16.66%)*5;
 		background: $white;
 		margin-top: $three-eight-padding;
 		padding: $quarter-padding $three-eight-padding $quarter-padding $quarter-padding;
@@ -19,4 +26,63 @@ p.cat-link {
     position: absolute;
     right: 40px;
     bottom: 22px;
+}
+.pagination ul {
+	list-style: none;
+	padding-left: 0;
+	margin-top: $quarter-padding;
+	li {
+		display: inline-block;
+		margin: $sixteenth/2;
+		span {
+			padding: $sixteenth/2;
+			border: 2px solid $black;
+			background: $black;
+			color: $white;
+		}
+		.current {
+			background: $white;
+			color: $black;
+		}
+		a {
+			padding: $sixteenth/2;
+			background: $black;
+			border: 2px solid $black;
+			color: $white;
+			text-decoration: none;
+			&:hover,
+			&:focus {
+				@include hoverblack;
+			}
+		}
+		&:first-child {
+			margin-left: 0;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+//RESPONSIVE
+@media (max-width: 750px) {
+	.content-wrapper {
+		padding: $one-eight-padding 16.66%;
+	}
+	.blogwrap {
+		.blogpost {
+			width: 100%;
+			padding: $one-eight-padding;
+			margin-top: $quarter-padding;
+		}
+	}
+}
+@media (max-width: 480px) {
+	.content-wrapper {
+		padding: $one-eight-padding 8.33%;
+	}
+	.blogwrap {
+		.blogpost {
+			margin-top: $one-eight-padding;
+		}
+	}
 }

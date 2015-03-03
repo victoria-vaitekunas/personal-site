@@ -46,7 +46,8 @@ p {
 //RESPONSIVE 
 @media (max-width: 750px) {
     h1 {
-
+        padding: 50px 0 50px 10%;
+        font-size: 4.5rem;
     }
     h2 {
         font-size: $sixteenth*3;
@@ -58,6 +59,10 @@ p {
     }
 }
 @media (max-width: 480px) {
+    h1 {
+        padding: 4px $one-eight-padding;
+        font-size: 2rem;
+    }
     h2 {
         font-size: $one-eight-padding;
     }

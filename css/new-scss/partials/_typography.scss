@@ -12,3 +12,10 @@
 		@include blog-p;
 	}
 }
+@media (max-width: 480px) {
+	.blogwrap {
+		p {
+			font-size: 1.2rem;
+		}
+	}
+}

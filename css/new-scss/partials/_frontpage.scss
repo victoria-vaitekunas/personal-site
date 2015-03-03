@@ -1,4 +1,4 @@
-.content-wrapper {
+.content-wrapper-main {
 	background: $teal;
 	width: 100%;
 	//max-width: 1400px;
@@ -99,7 +99,7 @@
 	}
 }
 @media (max-width: 480px) {
-	.content-wrapper {
+	.content-wrapper-main {
 		padding: $top-padding 8.33% $quarter-padding 8.33%;
 	}
 	.abouttext {
