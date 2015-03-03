@@ -14,10 +14,10 @@
 	<div class="nav2 navjs clearfix">
 		<h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
 			<div class="hamburger"><i class="fa fa-navicon fa-4x"></i></div>
-			<div>	
-				<div id="nav" class="hidden">
-					<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
-				</div>
-			</div>
+				
+			
+	</div>
+	<div id="nav" class="hidden">
+		<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 	</div>
 	<!-- end nav -->
