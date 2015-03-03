@@ -115,7 +115,7 @@ Template Name: Front Page Template
 			  <div class="size side4"></div>
 			</div>
 	</div><!-- /.supercontainer -->
-	<div class="content-wrapper">
+	<div class="content-wrapper-main">
 	<div class="about clearfix">
 		<?php $about = new WP_Query(
 			array(
@@ -125,7 +125,7 @@ Template Name: Front Page Template
 		); ?>	
 		<?php if ($about->have_posts() ) : ?>
 			<?php while ($about->have_posts() ) : $about ->the_post(); ?>
-		<div class="aboutblurb">
+		<div class="aboutblurb clearfix">
 			<div class="headshot">
 				<?php echo get_the_post_thumbnail(); ?>
 			</div><!-- /.headshot -->
