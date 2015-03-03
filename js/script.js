@@ -55,10 +55,33 @@ $(document).ready(function(){
 	// 	$('#nav2').toggleClass("shownav navigation2");
 	// });
 	$('.navjs').on('click', '.hamburger', function(){
-		$('#nav').fadeIn('slow').toggleClass("hidden shownav");
+		$('#nav').fadeIn('slow').toggleClass('hidden shownav');
+		return false;
 	});
-	$('.navjs').on('click', '#nav', function(){
-		$('#nav').fadeOut('slow');
-		console.log('click');
+	$('body').on('click', '#nav', function(){
+		console.log("clicked");
+		navFadeInOut();
+	}); 
+	function makePromises() {
+		var deferred = $.Deferred();
+
+	}
+	function navFadeInOut(){
+		if($('#nav').hasClass('shownav')) {
+			$('#nav').toggleClass('shownav hidden').css('display','none');
+			console.log('you are clicking and class is shownav');
+		} else {
+			$('#nav').fadeOut('slow');
+		}
+		return false;
+	};
+	function toggleThat(){
+		$('#nav').toggleClass('shownav hidden');
+	};
+
+
+	$.when( navFadeInOut() ).done(function(){
+		console.log('done?');
+		// smoothysmoo();
 	});
 });
