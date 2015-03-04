@@ -108,4 +108,18 @@
       echo '</p>';
     }
   }
+  //make lil list of categories for blog
+   function make_that_category_list() {
+    $catlinks = array(
+      'parent' => 0,
+      'orderby' => 'name'
+    ); 
+
+    $categories = get_categories( $catlinks ); 
+    echo '<ul>';
+    foreach ($categories as $category) {
+      echo '<li><a href="' . get_category_link($category->term_id) .'">' . $category->name . '</a></li>';
+    }
+    echo '</ul>';
+   }
 ?>

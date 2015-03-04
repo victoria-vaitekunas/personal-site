@@ -27,6 +27,9 @@
 	<?php endwhile; ?>
 	<?php wp_pagination(); ?>
 	</div><!-- /.blogwrap -->
+	<div class="category-list">
+		<?php make_that_category_list() ?>
+	</div>
 </div><!-- /.content-wrapper -->
 	<?php wp_reset_postdata(); ?>
 <?php else: ?>
