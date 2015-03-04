@@ -354,6 +354,7 @@ p a:hover {
   .nav2 {
     background: #2B2A2A;
     position: fixed;
+    top: 0;
     width: 100%;
     z-index: 10;
     box-shadow: 1px 1px 10px rgba(43, 42, 42, 0.9);
@@ -463,6 +464,11 @@ p a:hover {
     display: none;
   }
 }
+@media (max-width: 480px) {
+  .supercontainer {
+    padding-top: 97px;
+  }
+}
 @media (max-width: 320px) {
   .container {
     width: 100%;
@@ -519,9 +525,11 @@ p a:hover {
 }
 .aboutlist div ul {
   list-style: none;
+  padding: 0.875rem;
 }
 .aboutlist div ul li {
   color: #F7F7F7;
+  padding: 0.2rem;
 }
 
 .skills {
@@ -736,6 +744,11 @@ p a:hover {
   right: 175px;
 }
 
+.single-portfolio-wrapper img {
+  max-width: 100%;
+  height: auto;
+}
+
 .content-wrapper {
   background: #00D1C3;
   width: 100%;
@@ -815,7 +828,7 @@ p.cat-link {
 }
 @media (max-width: 480px) {
   .content-wrapper {
-    padding: 1.75rem 8.33%;
+    padding: 7rem 8.33% 1.75rem 8.33%;
   }
 
   .blogwrap .blogpost {
