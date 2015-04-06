@@ -40,8 +40,10 @@
 	display: inline-block;
 	ul {
 		list-style: none;
+		padding: $sixteenth;
 		li {
 			color: $white;
+			padding: 0.2rem;
 		}
 	}
 }

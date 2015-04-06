@@ -70,6 +70,11 @@
         display: none;
     }
 }
+@media (max-width: 480px) {
+    .supercontainer {
+        padding-top: 97px;
+    }
+}
 @media (max-width: 320px) {
     .container {
         width: 100%

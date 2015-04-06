@@ -28,6 +28,7 @@
 	<?php wp_pagination(); ?>
 	</div><!-- /.blogwrap -->
 	<div class="category-list">
+		<h3>By Topic</h3>
 		<?php make_that_category_list() ?>
 	</div>
 </div><!-- /.content-wrapper -->

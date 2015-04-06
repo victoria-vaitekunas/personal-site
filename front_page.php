@@ -175,18 +175,15 @@ Template Name: Front Page Template
 		<div class="paralellogram">	
 			<h2 id="portfolio">Recent Work</h2>
 		</div>
-		<div class="flexslider">
-			<ul class="slides">	
 		<?php $portfolioitem = new WP_Query( 
 			array(
-				'posts_per_page' => -1,
+				'posts_per_page' => 1,
 				'post_type' => 'portfolio'
 				) 
 		); ?>
 
 		<?php if ( $portfolioitem->have_posts() ) : ?>
 			<?php while ( $portfolioitem->have_posts() ) : $portfolioitem->the_post(); ?>
-								<li>
 					<div class="pfitem clearfix">	
 								<div class="pfolioimg clearfix">
 								<div class="frame-wrapper">  
@@ -210,15 +207,14 @@ Template Name: Front Page Template
 									</div>
 								</div><!-- /.pfoilioinfo -->
 					</div><!-- /.pfitem -->
-								</li>
+								
 			<?php endwhile; ?>
 
 		  	<?php wp_reset_postdata(); ?>
 
 		<?php else:  ?>
 		<?php endif; ?>
-		</ul><!-- /.slides -->
-	</div><!-- /.flexslider -->
+		
 </div><!-- /.portfolio -->
 </div><!-- /.content-wrapper -->
 <?php get_footer(); ?>

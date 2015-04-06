@@ -815,6 +815,31 @@ p.cat-link {
   margin-right: 0;
 }
 
+.category-list {
+  position: fixed;
+  bottom: 268px;
+  right: 1.75rem;
+  background: rgba(43, 42, 42, 0.4);
+  color: #F7F7F7;
+  padding: 0.875rem;
+}
+.category-list:hover {
+  -webkit-transition: 0.5s;
+          transition: 0.5s;
+  background: #2B2A2A;
+}
+.category-list h3 {
+  text-align: right;
+}
+.category-list ul {
+  list-style: none;
+  text-align: right;
+}
+.category-list ul li a {
+  padding-top: 0.875rem;
+  color: #F7F7F7;
+}
+
 @media (max-width: 750px) {
   .content-wrapper {
     padding: 1.75rem 16.66%;
@@ -824,6 +849,10 @@ p.cat-link {
     width: 100%;
     padding: 1.75rem;
     margin-top: 3.5rem;
+  }
+
+  .category-list {
+    position: static;
   }
 }
 @media (max-width: 480px) {
