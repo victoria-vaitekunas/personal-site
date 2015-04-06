@@ -8,13 +8,14 @@
 .hamburger {
 	width: $one-eight-padding;
 	height: $one-eight-padding;
-	@include rotatefortyfive;
-	@include defaultwhiteborder;
+	// @include rotatefortyfive;
+	// @include defaultwhiteborder;
 	position: fixed;
 	top: $quarter-padding;
 	right: $quarter-padding;
 	i {
-		display: none;
+		display: block;
+		color: $white;
 	}
 }
 .hidden {
