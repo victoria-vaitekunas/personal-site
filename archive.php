@@ -4,7 +4,7 @@
 		<div class="blogwrap clearfix">
 		<?php single_cat_title( '', false);  ?>
 		<?php if ( category_description() ) : ?>
-			<?php echo '<div class="cat-descrip">'.category_description().'</div>'; ?>
+			<?php echo '<div class="cat-descrip">'.'<h3>Reading</h3>'.category_description().'</div>'; ?>
 			<?php endif; ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 			<div class="blogpost">
@@ -23,6 +23,10 @@
 		<?php endwhile; ?>
 		<?php wp_pagination(); ?>
 		</div><!-- /.blogwrap -->
+		<div class="category-list">
+			<h3>Browse Topics</h3>
+			<?php make_that_category_list() ?>
+		</div>
 	</div><!-- /.content-wrapper -->
 		<?php else: ?>
 		<?php endif; ?>	
