@@ -12,57 +12,54 @@ var $ = jQuery.noConflict();
 
 
 $(document).ready(function(){
-	//stupid scroll nav
-	// $(window).scroll(function(){
-	// 	if ($(this).scrollTop() < 1050) {
-	// 		$(".hamburger").fadeOut("slow");
-	// 			if ($("#nav").hasClass("navigation")) {
-	// 				$("#nav").removeClass("navigation");
-	// 				$("#nav").addClass("shownav");
-	// 				console.log('hid nav');
-	// 			}
-	// 	} else {
-	// 		$(".hamburger").fadeIn("slow");
-	// 		// $(".navigation").fadeIn("slow");
-	// 		$(".nav").on('click', '.hamburger i', function(){
-	// 			if ($("#nav").hasClass("shownav")) {
-	// 			// $("#nav").fadeIn("slow").toggleClass("shownav navigation");
-	// 				$("#nav").removeClass("shownav");
-	// 				$("#nav").addClass("navigation");
-	// 			} else {
-	// 				$("#nav").removeClass("navigation");
-	// 				$("#nav").addClass("shownav");
-	// 			} 
-	// 		});
-	// 		$(".nav").on('click', '.menu-item', function(){
-	// 			$("#nav").toggleClass("navigation shownav");
-	// 		});
-	// 	}
-	// });
-
 	
-	
-	//portfolio js
-	// $('.pfitem').mouseenter(function(){
-	// 	$(this).find('.pfolioinfo').fadeIn('slow').css('display','block');
-	// });
-	// $('.pfitem').mouseleave(function(){
-	// 	$(this).find('.pfolioinfo').fadeOut('slow').css('display','none');
-	// });
-
-	//secondary nav
-	// $('.nav2').on('click', '.hamburger2 i', function(){
-	// 	$('#nav2').toggleClass("shownav navigation2");
-	// });
 	$('.navjs').on('click', '.hamburger', function(){
 		$('#nav').fadeIn('slow').toggleClass('hidden shownav');
+		$(this).css('z-index', '101');
+		$(this).animate({
+			"transform": "skewy(45deg)"
+		}, {
+			step: function(now,fx) {
+				$(this).find(".line-1").css({
+					'transform': 'translateY(9px) rotateZ(45deg)',
+					// 'position': 'absolute'
+				});
+				$(this).find(".line-2").css({
+					'opacity': '0'
+				});
+				$(this).find(".line-3").css({
+					'transform': 'translateY(-9px) rotateZ(135deg)',
+					// 'position': 'absolute'
+				});
+			},
+			duration: "slow"
+		}, "linear");
 		return false;
 	});
 	$('body').on('click', '#nav', function(){
 		console.log("clicked");
 		navFadeInOut();
+		XtoHamburger();
 	}); 
-	function makePromises() {
+	function XtoHamburger(){
+		$(".hamburger").animate({
+			"transform": "skewy(45deg)"
+		}, {
+			step: function(now,fx) {
+				$(this).find(".line-1").css({
+					'transform': 'translateY(0px) rotateZ(0deg)'
+				});
+				$(this).find(".line-2").css({
+					'opacity': '1'
+				});
+				$(this).find(".line-3").css({
+					'transform': 'translateY(0px) rotateZ(0deg)'
+				});
+			},
+			duration: "slow"
+		}, "linear");
+	};
+	function makePromises(){
 		var deferred = $.Deferred();
 
 	}

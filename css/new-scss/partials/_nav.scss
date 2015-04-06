@@ -14,8 +14,15 @@
 	top: $quarter-padding;
 	right: $quarter-padding;
 	i {
-		display: block;
+		display: none;
 		color: $white;
+	}
+	.hamline {
+		height: 3px;
+		width: 100%;
+		margin-bottom: $thirtytwo;
+		border-radius: 3px;
+		background: $white;
 	}
 }
 .hidden {

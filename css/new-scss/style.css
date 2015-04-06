@@ -129,14 +129,14 @@ button[disabled], input[disabled] {
 }
 
 input[type=checkbox], input[type=radio] {
-  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
   padding: 0;
 }
 
 input[type=search] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -165,7 +165,6 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 *, *:before, *:after {
   -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -229,7 +228,8 @@ p a {
 }
 p a:hover {
   color: #F7F7F7;
-  transition: 0.5s;
+  -webkit-transition: 0.5s;
+          transition: 0.5s;
 }
 
 @media (max-width: 750px) {
@@ -262,9 +262,7 @@ p a:hover {
 }
 .paralellogram {
   -webkit-transform: skewx(20deg);
-  -moz-transform: skewx(20deg);
   -ms-transform: skewx(20deg);
-  -o-transform: skewx(20deg);
   transform: skewx(20deg);
   background: #2B2A2A;
   padding: 10px 40px;
@@ -272,9 +270,7 @@ p a:hover {
 }
 .paralellogram h2 {
   -webkit-transform: skewx(330deg);
-  -moz-transform: skewx(330deg);
   -ms-transform: skewx(330deg);
-  -o-transform: skewx(330deg);
   transform: skewx(330deg);
 }
 
@@ -313,8 +309,20 @@ p a:hover {
   right: 3.5rem;
 }
 .hamburger i {
-  display: block;
+  display: none;
   color: #F7F7F7;
+}
+.hamburger .hamline {
+  height: 3px;
+  width: 100%;
+  margin-bottom: 0.4375rem;
+  border-radius: 3px;
+  background: #F7F7F7;
+}
+.hamburger .line-1 {
+  -webkit-transform: skewy(0deg);
+      -ms-transform: skewy(0deg);
+          transform: skewy(0deg);
 }
 
 .hidden {
@@ -397,18 +405,14 @@ p a:hover {
 .side1 {
   background: #B2B5B8;
   -webkit-transform: skewy(30deg);
-  -moz-transform: skewy(30deg);
   -ms-transform: skewy(30deg);
-  -o-transform: skewy(30deg);
   transform: skewy(30deg);
 }
 
 .side2 {
   background: #2B2A2A;
   -webkit-transform: skewy(330deg);
-  -moz-transform: skewy(330deg);
   -ms-transform: skewy(330deg);
-  -o-transform: skewy(330deg);
   transform: skewy(330deg);
   left: 50%;
 }
@@ -416,9 +420,7 @@ p a:hover {
 .side3 {
   background: #2B2A2A;
   -webkit-transform: skewy(330deg);
-  -moz-transform: skewy(330deg);
   -ms-transform: skewy(330deg);
-  -o-transform: skewy(330deg);
   transform: skewy(330deg);
   top: 115px;
 }
@@ -426,9 +428,7 @@ p a:hover {
 .side4 {
   background: #B2B5B8;
   -webkit-transform: skewy(30deg);
-  -moz-transform: skewy(30deg);
   -ms-transform: skewy(30deg);
-  -o-transform: skewy(30deg);
   transform: skewy(30deg);
   top: 115px;
   left: 50%;
@@ -505,9 +505,7 @@ p a:hover {
 
 .headshot {
   -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
   transform: rotate(45deg);
   border: 5px solid #F7F7F7;
   height: 369px;
@@ -519,9 +517,7 @@ p a:hover {
 }
 .headshot img {
   -webkit-transform: rotate(315deg);
-  -moz-transform: rotate(315deg);
   -ms-transform: rotate(315deg);
-  -o-transform: rotate(315deg);
   transform: rotate(315deg);
   margin: -215px 0 0 -78px;
   max-width: 145%;
@@ -820,7 +816,8 @@ p.cat-link {
 .pagination ul li a:hover, .pagination ul li a:focus {
   background: #F7F7F7;
   color: #2B2A2A;
-  transition: 0.6s;
+  -webkit-transition: 0.6s;
+          transition: 0.6s;
 }
 .pagination ul li:first-child {
   margin-left: 0;
@@ -844,13 +841,17 @@ p.cat-link {
   list-style: none;
   font-size: 1.2rem;
 }
+.category-list ul li {
+  padding-top: 0.4375rem;
+}
 .category-list ul li a {
-  padding-top: 0.875rem;
+  padding-top: 0.4375rem;
   color: #F7F7F7;
   text-decoration: none;
 }
 .category-list ul li a:hover {
-  transition: 0.5s;
+  -webkit-transition: 0.5s;
+          transition: 0.5s;
   color: #2B2A2A;
 }
 
@@ -934,21 +935,18 @@ p.cat-link {
   width: 5.25rem;
   height: 5.25rem;
   -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 .diamond:hover {
   background: #F7F7F7;
   color: #2B2A2A;
-  transition: 0.6s;
+  -webkit-transition: 0.6s;
+          transition: 0.6s;
 }
 .diamond i {
   -webkit-transform: rotate(315deg);
-  -moz-transform: rotate(315deg);
   -ms-transform: rotate(315deg);
-  -o-transform: rotate(315deg);
   transform: rotate(315deg);
 }
 
@@ -975,5 +973,3 @@ p.cat-link {
     font-size: 2rem;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
